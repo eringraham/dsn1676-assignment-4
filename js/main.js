@@ -5,6 +5,7 @@ var blueberries = {
     carbohydrates: 14.49,
     protein: 0.74    
 };
+console.log(blueberries.fullName);
 
 var grapes = {
     fullName: "Vitis Vinifera",
@@ -13,6 +14,7 @@ var grapes = {
     carbohydrates: 18.1,
     protein: 0.72    
 };
+console.log(grapes.fullName);
 
 var redcurrant = {
     fullName: "Ribes Rubrum",
@@ -21,6 +23,7 @@ var redcurrant = {
     carbohydrates: 13.8,
     protein: 1.4    
 };
+console.log(redcurrant.fullName);
 
 var writeBerry = function (berry) {
     document.write("<h1>" + berry.fullName + "</h1>");
@@ -29,24 +32,18 @@ var writeBerry = function (berry) {
         document.write("<dt>Grows on Shrubs</dt>")
         document.write("<dd>" + berry.growsOnShrub + "</dd>");
 
-
-
         document.write("<dt>Energy</dt>")
         document.write("<dd>" + berry.energy + "</dd>");
 
-
-
         document.write("<dt>Carbohydrates</dt>")
         document.write("<dd>" + berry.carbohydrates + "</dd>");
-
-
 
         document.write("<dt>Protein</dt>")
         document.write("<dd>" + berry.protein + "</dd>");
     document.write("</dl>");
 }
 
-var allBerry = [blueberries, grapes, redcurrant]
+var allBerry = [blueberries, grapes, redcurrant];
 
 allBerry.forEach(writeBerry);
 
